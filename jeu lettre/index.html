@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Chaîne de mots - Arcade Galactique</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="game">
+  <h2>🚀 Chaîne de mots Galactique ✨</h2>
+  <div id="intro">
+    Tape des mots qui commencent par la <strong>dernière lettre</strong> du mot précédent.<br>
+    Défie tes amis, marque des points et deviens le champion interstellaire ! 🌌
+  </div>
+
+  <div id="controlButtons">
+    <button onclick="startGame()">Commencer</button>
+    <button onclick="pauseGame()" id="pauseBtn">Pause</button>
+    <button onclick="endGame()">Terminer</button>
+  </div>
+
+  <div id="currentWordBox"><h3>Mot actuel : <span id="currentWord">chat</span></h3></div>
+  <div id="scoreBoard"></div>
+  <div id="inputArea">
+    <input type="text" id="wordInput" placeholder="Ton mot..." disabled>
+    <button onclick="checkWord()">Envoyer</button>
+  </div>
+  <h3>✅ Mots corrects</h3>
+  <ul id="wordList"></ul>
+  <h3>❌ Mots incorrects</h3>
+  <ul id="wrongList"></ul>
+  <div id="endMessage"></div>
+  <button id="replayBtn" onclick="resetGame()">Rejouer</button>
+  <div id="timer" style="text-align:center;font-size:18px;margin:10px 0;">⏳ Temps restant : 1:00</div>
+</div>
+
+<audio id="correctSound" src="https://www.soundjay.com/buttons/sounds/button-4.mp3"></audio>
+<audio id="wrongSound" src="https://www.soundjay.com/buttons/sounds/button-10.mp3"></audio>
+<audio id="endSound" src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3"></audio>
+<audio id="pauseSound" src="https://freesound.org/data/previews/337/337049_626453-lq.mp3"></audio>
+<audio id="resumeSound" src="https://freesound.org/data/previews/341/341695_6241675-lq.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
